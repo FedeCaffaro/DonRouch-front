@@ -23,7 +23,7 @@ async function execute() {
     const signer = provider.getSigner();
     const contract = new ethers.Contract(contractAddress, abi, signer);
     try {
-      await contract.claimItem([1,2],[1,1]);
+      await contract.claimItem(1,1);
     } catch (error) {
       console.log(error);
     }
